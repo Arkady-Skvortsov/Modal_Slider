@@ -1,0 +1,35 @@
+* {
+	background-color: black;
+}
+
+.img_container {
+    height: 600px;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+.img_container .img_o {
+	height: 225px;
+	width: 375px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	margin-top: 5px;
+	margin-left: 5px;
+	border: 3px solid red;
+	transition: 1s;
+}
+
+.img_container .img_o:hover {
+	border: 3px solid black;
+}
+
+.img_container .img_o img {
+	height: 225px;
+	max-width: 375px;
+}
+
+/* Modal Slider(Window) */
+
+
