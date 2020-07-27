@@ -1,5 +1,7 @@
-* {
-	background-color: black;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+	background: black;
 }
 
 .img_container {
@@ -10,19 +12,22 @@
 }
 
 .img_container .img_o {
-	height: 225px;
-	width: 375px;
+	height: 225px; /* 225 */
+	width: 375px; /* 375 */
 	display: inline-block;
 	position: relative;
 	cursor: pointer;
-	margin-top: 5px;
+	margin-top: 5px; /* 5, 5 */
 	margin-left: 5px;
-	border: 3px solid red;
+	border: 3px solid green; 
 	transition: 1s;
+	-o-transition: .1s;
+	-webkit-transition: 1s;
+	-mozila-transition: 1s;
 }
 
 .img_container .img_o:hover {
-	border: 3px solid black;
+    border: 3px solid rgba(0, 255, 0, .1);
 }
 
 .img_container .img_o img {
@@ -32,4 +37,274 @@
 
 /* Modal Slider(Window) */
 
+.main_win {
+	background: black;
+	opacity: 0;
+    width: 100%;
+    height: 757px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
+.main_win.show_anim {
+	animation: anim 1s linear 1;
+}
+
+@keyframes anim {
+    0% {
+    	opacity: .2;
+    }
+
+    25% {
+    	opacity: .4;
+    }
+
+    50% {
+    	opacity: .6;
+    }
+
+    75% {
+    	opacity: .8;
+    }
+
+    100% {
+    	opacity: 1;
+    }
+}
+
+.main_win.show {
+	opacity: .99;
+}
+
+.main_win.hide_anim {
+	animation: hide 1s linear 1;
+}
+
+@keyframes hide {
+	0% {
+		opacity: 1;
+	}
+
+	25% {
+		opacity: .8;
+	}
+
+	50% {
+		opacity: .6;
+	}
+
+	75% {
+		opacity: .4;
+	}
+
+	100% {
+        opacity: .2;
+	}
+}
+
+.main_win.hide {
+	display: none;
+}
+
+.picture {
+	height: 600px;
+	width: 900px;
+	position: relative;
+	margin: 0 auto;
+	top: 85px;
+	border: 2px solid white;
+}
+
+.img_picture {
+	min-height: 550px;
+	max-width: 900px;
+}
+
+.name_of_block {
+    width: 900px;
+    height: 50px;
+    background: black;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    left: 0;
+    top: 550px;
+    position: absolute;
+    z-index: 2;
+}
+
+.name {
+	font-size: 25px;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 5.5px;
+	cursor: pointer;
+	transition: .8s;
+	-o-transition: .8s;
+	-mozila-transition: .8s;
+	-webkit-transition: .8s;
+}
+
+.name:hover {
+    text-shadow: 0 0 15px white;
+}
+
+.right_button {
+	height: 75px;
+	width: 75px;
+	position: relative;
+	background: white;
+	float: right;
+	right: 250px;
+	margin-top: -250px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: .8s;
+    -o-transition: .8s;
+    -webkit-transition: .8s;
+    -mozila-transition: .8s;
+}
+
+.right_button:hover {
+	box-shadow: 0 0 20px white;
+	transform: translateX(15px);
+}
+
+.right_button.hide_right {
+	animation: hide_right .7s linear 1;
+}
+
+@keyframes hide_right {
+	0% {
+       opacity: .8;
+	}
+
+	25% {
+       opacity: .6;
+	}
+
+	50% {
+       opacity: .4;
+	}
+
+	75% {
+       opacity: .2;
+	}
+
+	100% {
+       opacity: 0;
+	} 
+}
+
+.right_button.hide_right2 {
+	opacity: 0;
+}
+
+.left_button {
+	background: white;
+	float: left;
+	position: relative;
+	height: 75px;
+	width: 75px;
+	left: 250px;
+	margin-top: -250px;
+	cursor: pointer;
+	border-radius: 40px;
+	transition: .8s;
+	-o-transition: .8s;
+	-mozila-transition: .8s;
+	-webkit-transition: .8s;
+}
+
+.left_button:hover {
+	box-shadow: 0 0 20px white;
+	transform: translateX(-15px);
+}
+
+.left_button.hide_left {
+	animation: hide_left .7s linear 1;
+}
+
+@keyframes hide_left {
+	0% {
+       opacity: .8;
+	}
+
+	25% {
+       opacity: .6;
+	}
+
+	50% {
+       opacity: .4;
+	}
+
+	75% {
+       opacity: .2;
+	}
+
+	100% {
+       opacity: 0;
+	} 
+}
+
+.left_button.hide_left2 {
+	opacity: 0;
+}
+
+.button_icon {
+	font-size: 55px;
+	color: black;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.crst {
+	height: 75px;
+	width: 75px;
+	background: white;
+	border-radius: 40px;
+	position: absolute;
+	top: 5px;
+	left: 750px;
+	cursor: pointer;
+	transition: .7s;
+	-o-transition: .7s;
+	-mozila-transition: .7s;
+	-webkit-transition: .7s;
+}
+
+.crst:hover {
+	transform: scale(.9);
+	box-shadow: 0 0 20px white;
+}
+
+.cross {
+	font-size: 60px;
+	color: black;
+	margin-top: 10px;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .7s;
+    -o-transition: .7s;
+    -mozila-transition: .7s;
+    -webkit-transition: .7s;
+}
+
+.cross:hover {
+	transform: rotate(45deg);
+}
+
+.count {
+	font-size: 40px;
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	top: 10px;
+	left: 10px;
+	position: absolute;
+}
